@@ -1,0 +1,123 @@
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d1d1ff;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Tabela periódica */
+#tabela {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+#tabela table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#tabela td {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #444;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.element-btn {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cores por grupo */
+.nao-metais { background-color: #298d57; }
+.metais-alcalinos { background-color: #d16e0e; }
+.metais-alcalinos-terrosos { background-color: #d1b20e; }
+halogenios { background-color: #0ed1cf; }
+.gases-nobres { background-color: #8653f6; }
+.metais-transicao { background-color: #bf1b1b; }
+.outros-metais { background-color: #3f8f9e; }
+.lantanideos { background-color: #4fa2a2; }
+.actinidios { background-color: #a44dbf; }
+.semimetais { background-color: #0f9175; }
+
+/* Modelo 3D */
+#model3d {
+  min-width: 320px;
+  max-width: 500px;
+  flex: 1;
+  text-align: center;
+}
+
+#model3d-canvas {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  background-color: #000;
+  border: 1px solid #555;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+#element-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tabela td {
+    width: 45px;
+    height: 45px;
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
